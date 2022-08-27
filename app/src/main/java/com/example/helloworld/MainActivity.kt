@@ -1,5 +1,7 @@
 package com.example.helloworld
 
+import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -27,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         // log info
         Log.i("lifeCycle", "1. onCreate")
 
+        // Change text value
         val btnClickMe: Button = findViewById<Button>(R.id.button_click_me)
         val edtName: EditText = findViewById<EditText>(R.id.edit_name)
         val txvResult: TextView = findViewById(R.id.text_view_result)
@@ -34,6 +37,21 @@ class MainActivity : AppCompatActivity() {
         btnClickMe.setOnClickListener {
             val name: String = edtName.editableText.toString()
             txvResult.text = name
+        }
+
+        // Open other activities
+        val btnOpenSite: Button = findViewById<Button>(R.id.open_site)
+        val btnNextActivity: Button = findViewById<Button>(R.id.open_next_activity)
+
+        btnOpenSite.setOnClickListener {
+            val i = Intent(Intent.ACTION_VIEW, Uri.parse(
+                    "http://dmenezesgabriel.github.io"))
+            startActivity(i)
+        }
+
+        btnNextActivity.setOnClickListener {
+            var i = Intent(this, NextActivity::class.java)
+            startActivity(i)
         }
     }
 
