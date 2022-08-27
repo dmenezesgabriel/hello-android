@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    tools:context=".RelativeLayout">
+
+    <TextView
+        android:id="@+id/txv_login"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Login"
+         android:textSize="24sp"
+         android:textStyle="bold"
+         android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/edt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="E-mail"
+        android:layout_centerVertical="true"
+        />
+
+    <EditText
+        android:id="@+id/edt_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:layout_centerVertical="true"
+        android:layout_below="@id/edt_email"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:layout_below="@id/edt_password"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
