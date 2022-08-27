@@ -44,12 +44,14 @@ class MainActivity : AppCompatActivity() {
         val btnNextActivity: Button = findViewById<Button>(R.id.open_next_activity)
 
         btnOpenSite.setOnClickListener {
+            // Implicit
             val i = Intent(Intent.ACTION_VIEW, Uri.parse(
                     "http://dmenezesgabriel.github.io"))
             startActivity(i)
         }
 
         btnNextActivity.setOnClickListener {
+            // Explicit
             var i = Intent(this, NextActivity::class.java)
             startActivity(i)
         }
