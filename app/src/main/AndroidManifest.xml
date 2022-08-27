@@ -14,6 +14,9 @@
         android:theme="@style/Theme.HelloWorld"
         tools:targetApi="31">
         <activity
+            android:name=".TableLayout"
+            android:exported="false" />
+        <activity
             android:name=".LinearLayout"
             android:exported="false" />
         <activity
